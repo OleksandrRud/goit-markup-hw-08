@@ -1,0 +1,45 @@
+@mixin font($fw,$fz,$lh) {
+  font-weight: $fw;
+  font-size: $fz;
+  line-height: $lh;
+}
+  // text-align: center;
+  // margin-top: 0;
+  // margin-bottom: 50px;
+  // color: var(--primery-text-color);
+
+// font-weight: 700;
+// font-size: 36px;
+
+
+@mixin social($d:flex,$ai:center,$jc:center,$w:44px,$h:44px,$br:50%) {
+    display: $d;
+    align-items: $ai;
+    justify-content: $jc;
+    width: $w;
+    height: $h;
+    border-radius: $br;
+}
+
+ @mixin flexCenter($type: flex, $main-axis: center, $cross-axis: center) {
+   display: $type;
+   justify-content: $main-axis;
+   align-items: $cross-axis;
+ }
+
+//  @mixin button {
+//   height: 50px;
+//     width: 200px;
+//     color: var(--text-white-color);
+//     background-color: var(--acccent-text-color);
+//     font-family: "Roboto";
+//     font-weight: 700;
+//     font-size: 16px;
+//     line-height: 1.88;
+//     letter-spacing: 0.06em;
+//     border-radius: 4px;
+//     text-align: center;
+//     border: 1px transparent;
+    
+//     cursor: pointer;
+//  }

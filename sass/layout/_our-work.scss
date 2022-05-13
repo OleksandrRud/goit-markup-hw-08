@@ -1,0 +1,38 @@
+.work__title{
+  @include font(700,36px,1.16);
+  text-align: center;
+    margin-top: 0;
+    margin-bottom: 50px;
+    color: var(--primery-text-color);
+}
+.work__list {
+  @extend %content_center;
+}
+
+.work__item {
+  margin-right: 30px;
+  &:nth-child(3n) {
+    margin-right: 0px;
+  }
+}
+
+.work__foto {
+  position: relative;
+}
+
+.work__text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  line-height: 1.14;
+  color: var(--text-white-color);
+  background-color: rgba(47, 48, 58, 0.8);
+}
+

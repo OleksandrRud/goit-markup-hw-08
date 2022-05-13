@@ -1,0 +1,124 @@
+
+.footer {
+  background-color: var(--bkg-hero);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer__about {
+  display: flex;
+}
+
+.footer__content {
+  font-style: normal;
+  margin-right: 70px;
+}
+
+.footer__logo {
+  @extend %logo;
+}
+
+.footer__logo--white {
+  color: var(--text-white-color);
+}
+
+.footer__nav :hover,
+.footer__nav :focus {
+  color: var(--acccent-text-color);
+}
+
+.footer__map {
+  display: inline-block;
+  color: var(--text-white-color);
+  line-height: 1.71;
+  text-decoration: none;
+  margin: 20px 0 0 0;
+}
+.footer__contact {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.71;
+  text-decoration: none;
+  margin: 9px 0 0 0;
+}
+
+
+
+.footer__title {
+  margin-top: 12px;
+  margin-bottom: 20px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: var(--text-white-color);
+}
+
+.footer__social {
+  display: flex;
+}
+
+
+
+.footer__item {
+  margin-right: 10px;
+}
+
+.footer__link {
+  @include social($d: flex, $ai: center, $jc: center, $w:44px, $h:44px, $br: 50%);
+  background: rgba(255, 255, 255, 0.1);
+&:hover {
+  background-color: var(--acccent-text-color);
+}
+&:focus {
+  background-color: var(--acccent-text-color);
+}
+}
+
+.footer__element {
+  fill: var(--text-white-color);
+}
+
+.footer__subscribe {
+  margin-left: auto;
+}
+
+.footer__box{
+  display: flex;
+}
+
+.footer__input {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: var(--bkg-hero);
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.03em;
+  &::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  }
+}
+.footer__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @extend %button;
+  padding: 0 28px 0 29px;
+  margin-left: 12px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  &:hover,
+  &:focus {
+    background-color: var(--bkg-hover-btn-hero);
+  }
+}

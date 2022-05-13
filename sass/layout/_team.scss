@@ -1,0 +1,72 @@
+.team {
+  background-color: var(--button-portfolio);
+}
+.team__title{
+      @include font(700, 36px, 1.16);
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 50px;
+      color: var(--primery-text-color);
+    }
+
+.team__list.list{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.team__item {
+  background-color: var(--back-ground-color);
+  border-radius: 0 0 4px 4px;
+  margin-right: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  &:nth-child(4n) {
+      margin-right: 0;
+    }
+}
+
+
+
+.team__info {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.team__name {
+  color: var(--primery-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  margin: 0 0 10px 0;
+}
+
+.team__position {
+  font-size: 16px;
+  line-height: 1.18;
+  margin: 0;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.social__item+.social__item {
+  margin-left: 10px;
+}
+
+.social__link {
+  @include social($d: flex, $ai: center, $jc: center, $w: 44px, $h: 44px, $br: 50%);
+  fill: var(--logo-of-clients);
+  &:hover {
+  background-color: var(--acccent-text-color);
+  fill: var(--text-white-color);
+  }
+  &:focus {
+  background-color: var(--acccent-text-color);
+  fill: var(--text-white-color);
+  }
+}
+
