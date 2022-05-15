@@ -1,12 +1,14 @@
 .team {
   background-color: var(--button-portfolio);
 }
-.team__title{
-      @include font(700, 36px, 1.16);
-      text-align: center;
-      margin-top: 0;
-      margin-bottom: 50px;
-      color: var(--primery-text-color);
+.team__title {
+//  @include font (null,700,28px,1.17,0.03);
+margin-bottom: 30px;
+      // @include font(700, 36px, 1.16);
+      // text-align: center;
+      // margin-top: 0;
+      // margin-bottom: 50px;
+      // color: var(--primery-text-color);
     }
 
 .team__list.list{
