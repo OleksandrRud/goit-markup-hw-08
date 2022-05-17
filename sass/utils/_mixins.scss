@@ -5,14 +5,12 @@
 // }
 @mixin font ($fst,$fw,$fsz,$lh,$lsp) {
   font-style: $fst;
-    font-weight:$fw;
-    font-size:$fsz ;
-    line-height:$lh ;
-    /* identical to box height */
-    // text-align: center;
-    letter-spacing:$lsp ;
-  
+  font-weight:$fw;
+  font-size:$fsz ;
+  line-height:$lh ;
+  letter-spacing:$lsp ;  
 }
+
   // text-align: center;
   // margin-top: 0;
   // margin-bottom: 50px;
@@ -35,6 +33,11 @@
    display: $type;
    justify-content: $main-axis;
    align-items: $cross-axis;
+ }
+
+ @mixin sectionsize($padding-top,$padding-bottom) {
+   padding-top: $padding-top;
+   padding-bottom:$padding-bottom;
  }
 
 //  @mixin button {

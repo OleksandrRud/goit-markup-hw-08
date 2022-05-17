@@ -1,36 +1,48 @@
 .clients__title {
-  @include font(null,700, 36px, 1.16,0.03);
+  @include font(null,700, 36px, 1.16,null);
   text-align: center;
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: var(--primery-text-color);
+  @media screen and (min-width:1200px) {
+  margin-bottom: 50px;
+  }
 }
+
 .clients__list {
-  @extend %content_center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
 }
 
 .clients__item {
-  width: 170px;
-  height: 92px;
+  @include flexCenter($type: flex, $main-axis: center, $cross-axis: center);
+  width: calc(100% / 2 - 30px);
+  margin-bottom: 30px;
+  margin-left: 30px;
   border: 1px solid var(--logo-of-clients);
   border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  &+& {
-      margin-left: 30px;
-    }
   &:hover,
   &:focus {
-      border-color: var(--acccent-text-color);
+    border-color: var(--acccent-text-color);
+    }
+    @media screen and (min-width:768px){
+    width: calc(100% / 3 - 30px);
+    }
+    @media screen and (min-width:1200px){
+    width: calc(100% / 6 - 30px);
     }
 }
 
 .clients__link {
-  padding: 15px 32px;
+  padding: 14px 52px;
   fill: var(--logo-of-clients);
 &:hover,
 &:focus {
   fill: var(--acccent-text-color);
-}
+  }
+  @media screen and (min-width:1200px){
+  padding: 15px 32px;
+  }
 }
