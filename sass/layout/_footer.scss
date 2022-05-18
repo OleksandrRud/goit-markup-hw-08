@@ -1,26 +1,35 @@
 
 .footer {
   background-color: var(--bkg-hero);
-  // padding-top: 60px;
-  // padding-bottom: 60px;
+
 }
-.qqq{
+.footer__info{
   @media screen and (min-width:768px) {
   display: flex;
   justify-content: space-around;
   }
-  
+  @media screen and (min-width:1200px) {
+  display: contents;
+  }
 }
 
 .footer__about {
   display: flex;
   flex-direction: column;
+  @media screen and (min-width:1200px) {
+  flex-direction: row;
+  }
 }
 
 .footer__content {
   font-style: normal;
-  // margin-right: 70px;
   text-align: center;
+  padding-bottom: 60px;
+  @media screen and (min-width:1200px) {
+  text-align: start;
+  margin-right: 70px;
+  padding-bottom: 0;
+  }
 }
 
 .footer__logo {
@@ -51,17 +60,23 @@
   margin: 8px 0 0 0;
 }
 
-// .footer__join{
-//   padding-top: 60px;
-//   padding-bottom: 60px;
-// }
+.footer__join{
+  padding-bottom: 60px;
+  @media screen and (min-width:1200px) {
+  padding-bottom: 0;
+  }
+}
 
 .footer__title {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 0;
   margin-bottom: 20px; 
   @include font (normal, 700, null, 1.14, null);
   color: var(--text-white-color);
+  @media screen and (min-width:1200px) {
+  text-align: start;
+  margin-top: 12px;
+  }
 }
 
 .footer__social {
@@ -69,21 +84,21 @@
   justify-content: center;
 }
 
-
-
 .footer__item {
+  &:not(:last-child){
   margin-right: 10px;
+  }
 }
 
 .footer__link {
   @include social($d: flex, $ai: center, $jc: center, $w:44px, $h:44px, $br: 50%);
   background: rgba(255, 255, 255, 0.1);
-&:hover {
+  &:hover {
   background-color: var(--acccent-text-color);
-}
-&:focus {
+  }
+  &:focus {
   background-color: var(--acccent-text-color);
-}
+  }
 }
 
 .footer__element {
@@ -91,24 +106,20 @@
 }
 
 .footer__subscribe {
-  // margin-left: auto;
   text-align: center;
+  @media screen and (min-width:1200px){
+  margin-left: auto;
+  }
 }
 
 .footer__box{
-  @media screen and (min-width:768px) {
-display: block;
-justify-content: center;
-flex-direction:column;
+  @media screen and (min-width:1200px) {
+  display: flex;  
   }
-  
-  
- 
-
 }
 
 .footer__input {
-  // width: 358px;
+  display: flex;
   width: 100%;
   height: 50px;
   @include font (normal,400,16px,1.25,0.03em);
@@ -116,16 +127,19 @@ flex-direction:column;
   border-radius: 4px;
   background-color: var(--bkg-hero);
   padding-left: 16px;
-  display: flex;
   align-items: center;
   font-family: 'Roboto';
   color: rgba(255, 255, 255, 0.6);
   &::placeholder {
   color: rgba(255, 255, 255, 0.6);
   }
-    @media screen and (min-width:768px) {
-      width: 450px;
-    }
+  @media screen and (min-width:768px) {
+  width: 450px;
+  margin: 0 auto;
+  }
+  @media screen and (min-width:1200px){
+  width: 358px;
+  }
 }
 .footer__button {
   display: inline-flex;
@@ -133,11 +147,14 @@ flex-direction:column;
   justify-content: space-between;
   @extend %button;
   padding: 0 28px 0 29px;
-  // margin-left: 12px;
   margin-top: 20px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   &:hover,
   &:focus {
-    background-color: var(--bkg-hover-btn-hero);
+  background-color: var(--bkg-hover-btn-hero);
+  }
+  @media screen and (min-width:1200px) {
+  margin-top: 0;
+  margin-left: 12px;
   }
 }

@@ -25,6 +25,10 @@
   @include font (null, 900,26px,1.61,0.06em);
   color: var(--text-white-color);
   text-align: center;
+  @media screen and (max-width:400px) {
+    padding: 0 10px 0 10px;
+    width: 100%;
+  }
   @media screen and (min-width:1200px) {
     width: 696px;
   @include font (null, 900, 44px, 1.36, 0.06em);
