@@ -1,20 +1,44 @@
 
 .header {
-  border-bottom: 1px solid var(--bottom-line-header);
-  background-color:var(--back-ground-color);
   
+  border-bottom: 1px solid var(--bottom-line-header);
+  background-color:var(--back-ground-color); 
+  // @media screen and (max-width:767px) {
+  
+  // }
+    // position:fixed;
 }
 
 .menu {
- @extend %content_center;
+
+//  @extend %content_center;
+
+display: flex;
+@media screen and (min-width:768px) {
+  justify-content: space-between;
+  align-items: center;
+ }
+@media screen and (min-width:1200px){
+  justify-content: left;
+ }
 }
 
 .menu__logo {
-  @extend %logo;
-  display: flex;
-  align-items: center;
+  @include font (null,700,24px,1.16,null);
+  color: var(--acccent-text-color);
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  @media screen and (min-width:1200px){
+  @include font (null, 700, 26px, 1.2, null);
   margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  }
   
+  // @extend %logo;
+  // display: flex;
+  // align-items: center;
 }
 
 .menu__logo--black {
@@ -22,7 +46,10 @@
 }
 
 .nav {
+  display: none;
+  @media screen and (min-width:768px) {
   display: flex;
+}
 }
 
 .nav__item {
@@ -36,11 +63,9 @@
 .nav__pages {
   color: var(--title-text-color);
   display: block;
+  @include font (null,500, null, 1.14,0.02em);
   padding-top: 32px;
   padding-bottom: 32px;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
   text-decoration: none;
  &:hover,
  &:focus {
@@ -50,11 +75,9 @@
 
 .nav__pages--current{
   display: block;
+  @include font (null, 500, null, 1.14, 0.02em);
   padding-top: 32px;
   padding-bottom: 32px;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--acccent-text-color);
   &::after {
@@ -70,13 +93,23 @@
 }
 
 .contacts {
+  display: none;
+  @media screen and (min-width:768px) {
+  display: block;
+  }
+  @media screen and (min-width:1200px) {
   display: flex;
-  align-items: center;
   margin-left: auto;
+  }
+  // align-items: center;
 }
 
 .contacts .contacts__item+.contacts__item {
+  padding-top: 10px;
+  @media screen and (min-width:1200px) {
   margin-left: 50px;
+  padding-top: 0; 
+  } 
 }
 
 
@@ -87,16 +120,16 @@
 }
 
 .contacts__name {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  color: var(--title-text-color);
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  fill: var(--title-text-color);
   align-items: center;
   display: flex;
+  @include font (null, 500, null, 1.14, 0.02em);
+  color: var(--title-text-color);
+  text-decoration: none;
+  fill: var(--title-text-color);
+  @media screen and (min-width:1200px){
+  padding-top: 32px;
+  padding-bottom: 32px;
+  }
 }
 
 .contacts__icon {
