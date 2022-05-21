@@ -19,6 +19,11 @@
     
             <nav class="menu">
                 <a href="./index.html" class="menu__logo">Web<span class="menu__logo--black">Studio</span></a>
+                <button type="button" class="mobile__button--open">
+                    <svg width="40" height="40">
+                        <use href="./images/symbol-defs.svg#mobile-menu"></use>
+                    </svg>
+                </button>
                 <ul class="nav list">
                     <li class="nav__item"><a href="./index.html" class="nav__pages">Студия</a></li>
                     <li class="nav__item"><a href="" class="nav__pages--current">Портфолио</a></li>
@@ -34,7 +39,7 @@
                             info@devstudio.com
                         </a>
                     </li>
-                
+    
                     <li class="contacts__item">
                         <a href="tel:+380961111111" class="contacts__name">
                             <svg width="10" height="16" class="contacts__icon">
@@ -45,6 +50,30 @@
                     </li>
                 </ul>
             </nav>
+        </div>
+        <!-- mobile menu -->
+        <div class="mobile is-hidden">
+            <button type="button" class="mobile__button--close">
+                <svg width="40" height="40">
+                    <use href="./images/symbol-defs.svg#close"></use>
+                </svg>
+            </button>
+            <ul class="mobile__nav list">
+                <li class="mobile__info"><a href="./index.html" class="mobile__pages">Студия</a></li>
+                <li class="mobile__info"><a href="" class="mobile__pages">Портфолио</a></li>
+                <li class="mobile__info"><a href="" class="mobile__pages">Контакты</a></li>
+            </ul>
+            <ul class="mobile__contacts list">
+                <li class="mobile__info"><a href="tel:+380961111111" class="mobile__tel">+38 096 111 11 11</a></li>
+                <li class="mobile__info"><a href="mailto:info@devstudio.com" class="mobile__mail">info@devstudio.com</a>
+                </li>
+            </ul>
+            <ul class="mobile__links list">
+                <li class="mobile__item"><a href="" class="mobile__social">Instagram</a></li>
+                <li class="mobile__item"><a href="" class="mobile__social">Twetter</a></li>
+                <li class="mobile__item"><a href="" class="mobile__social">Facebook</a></li>
+                <li class="mobile__item"><a href="" class="mobile__social">LinkedIn</a></li>
+            </ul>
         </div>
     </header>
     <main>
@@ -182,70 +211,75 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
-    <div class="container">
-        <address>
-            <div class="footer__about">
-                <div class="footer__content">
-                    <a href="./index.html" class="footer__logo">Web<span class="footer__logo--white">Studio</span></a>
-                    <ul class="footer__nav list">
-                        <li><a href="https://goo.gl/maps/dz8LgYKqn3LP9GC87" target="_blank" class="footer__map">г. Киев,
-                                пр-т Леси Украинки,26</a></li>
-                        <li><a href="mailto:info@example.com" class="footer__contact">info@example.com</a></li>
-                        <li><a href="tel:+380991111111" class="footer__contact">+38 099 111 11 11</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <p class="footer__title">ПРИСОЕДИНЯЙТЕСЬ</p>
-                    <ul class="footer__social list">
-                        <li class="footer__item">
-                            <a href="" class="footer__link">
-                                <svg class="footer__element" width="20" height="20">
-                                    <use href="./images/symbol-defs.svg#instagram"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="footer__item">
-                            <a href="" class="footer__link">
-                                <svg class="footer__element" width="20" height="20">
-                                    <use href="./images/symbol-defs.svg#twitter"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="footer__item">
-                            <a href="" class="footer__link">
-                                <svg class="footer__element" width="20" height="20">
-                                    <use href="./images/symbol-defs.svg#facebook"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="footer__item">
-                            <a href="" class="footer__link">
-                                <svg class="footer__element" width="20" height="20">
-                                    <use href="./images/symbol-defs.svg#linkedin"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
+    <footer class="footer section">
+        <div class="container">
+            <address>
+                <div class="footer__about">
+                    <div class="footer__info">
+                        <div class="footer__content">
+                            <a href="./index.html" class="footer__logo">Web<span
+                                    class="footer__logo--white">Studio</span></a>
+                            <ul class="footer__nav list">
+                                <li><a href="https://goo.gl/maps/dz8LgYKqn3LP9GC87" target="_blank" class="footer__map">г.
+                                        Киев, пр-т Леси
+                                        Украинки,26</a></li>
+                                <li><a href="mailto:info@example.com" class="footer__contact">info@example.com</a></li>
+                                <li><a href="tel:+380991111111" class="footer__contact">+38 099 111 11 11</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__join">
+                            <p class="footer__title">ПРИСОЕДИНЯЙТЕСЬ</p>
+                            <ul class="footer__social list">
+                                <li class="footer__item">
+                                    <a href="" class="footer__link">
+                                        <svg class="footer__element" width="20" height="20">
+                                            <use href="./images/symbol-defs.svg#instagram"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="" class="footer__link">
+                                        <svg class="footer__element" width="20" height="20">
+                                            <use href="./images/symbol-defs.svg#twitter"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="" class="footer__link">
+                                        <svg class="footer__element" width="20" height="20">
+                                            <use href="./images/symbol-defs.svg#facebook"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="" class="footer__link">
+                                        <svg class="footer__element" width="20" height="20">
+                                            <use href="./images/symbol-defs.svg#linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
     
     
+                        </div>
+                    </div>
+                    <div class="footer__subscribe">
+                        <p class="footer__title">ПОДПИШИТЕСЬ НА РАССЫЛКУ</p>
+                        <form class="footer__box">
+                            <label for="subscribe"></label>
+                            <input class="footer__input" type="email" name="subscribe" id="subscribe" placeholder="E-mail">
+                            <button class="footer__button" type="submit">Подписаться
+                                <svg width="24" height="24">
+                                    <use href="./images/symbol-defs.svg#telegram"></use>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
                 </div>
-                <div class="footer__subscribe">
-                    <p class="footer__title">ПОДПИШИТЕСЬ НА РАССЫЛКУ</p>
-                    <form class="footer__box">
-                        <label for="subscribe"></label>
-                        <input class="footer__input" type="email" name="subscribe" id="subscribe" placeholder="E-mail">
-                        <button class="footer__button" type="submit">Подписаться
-                            <svg width="24" height="24">
-                                <use href="./images/symbol-defs.svg#telegram"></use>
-                            </svg>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </address>
-    </div>
+            </address>
+        </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
     
 
 </body>

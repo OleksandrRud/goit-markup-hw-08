@@ -19,8 +19,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(100%);
-  width: 528px;
-  min-height: 581px;
+  
+  width: 450px;
+  min-height: 609px;
+  
   padding: 40px;
   background-color: var(--back-ground-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -29,10 +31,16 @@
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
   .backdrop.is-hidden & {
-      transform: translate(-50%, -50%) scale(10%);
-    }
+  transform: translate(-50%, -50%) scale(10%);
+  }
+  @media screen and (max-width:479px) {
+  width: calc(100% - 30px) ;
+  }
+  @media screen and (min-width:1200px){
+  width: 528px;
+  min-height: 581px;
+  }
 }
-
 
 .modal__close {
   display: flex;
@@ -49,19 +57,20 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
   &:hover,
-    &:focus {
-      fill: var(--acccent-text-color);
-    }
+  &:focus {
+  fill: var(--acccent-text-color);
+  }
 }
 
 .modal__title {
   margin: 0;
   padding-bottom: 12px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
+  @include font (null, 700, 20px,1.5, null);
   text-align: center;
   color: var(--primery-text-color);
+  @media screen and (min-width:1200px) {
+  @include font (null, 700, 20px, 1.15, null);  
+  }
 }
 
 .modal__group {
@@ -105,8 +114,8 @@
   transform: translateY(-50%);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   .modal__input:focus+& {
-      fill: var(--acccent-text-color);
-    }
+  fill: var(--acccent-text-color);
+  }
 }
 
 .modal__coment {
@@ -118,7 +127,7 @@
   border-radius: 4px;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:focus {
-    outline: 1px solid var(--acccent-text-color);
+  outline: 1px solid var(--acccent-text-color);
   }
   &::placeholder {
     font-size: 12px;
@@ -131,18 +140,22 @@
 
 .modal__agree {
   position: relative;
-  line-height: 1.71;
   display: flex;
   align-items: center;
   justify-content: center;
+  line-height: 1.16;
+  font-size: 12px;
+  @media screen and (min-width:1200px){
+  line-height: 1.71;
+    font-size: 14px;
+  }
 }
 
 .modal__link {
-  line-height: 1.71;
   color: var(--acccent-text-color);
   &:hover {
-      text-decoration: none;
-    }
+  text-decoration: none;
+  }
 }
 
 
@@ -160,8 +173,8 @@
   border-radius: 2px;
   border: 2px solid var(--primery-text-color);
   .modal__checkbox:focus+& {
-      box-shadow: 0px 0px 1px 1px rgba(96, 93, 93, 0.8);
-    }
+  box-shadow: 0px 0px 1px 1px rgba(96, 93, 93, 0.8);
+  }
   .modal__checkbox:checked+& {
     background-color: var(--acccent-text-color);
     border-color: transparent;
@@ -171,6 +184,7 @@
     background-repeat: no-repeat;
   }
 }
+
 .modal__checkbox {
   position: absolute;  
 }
