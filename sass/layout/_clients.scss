@@ -21,6 +21,7 @@
   width: calc(100% / 2 - 30px);
   margin-bottom: 30px;
   margin-left: 30px;
+  padding: 16px 52px;
   border: 1px solid var(--logo-of-clients);
   border-radius: 4px;
   &:hover,
@@ -29,20 +30,18 @@
     }
     @media screen and (min-width:768px){
     width: calc(100% / 3 - 30px);
+    padding: 16px 60px;
     }
     @media screen and (min-width:1200px){
     width: calc(100% / 6 - 30px);
+    padding: 16px 32px;
     }
 }
 
 .clients__link {
-  padding: 14px 52px;
   fill: var(--logo-of-clients);
 &:hover,
 &:focus {
   fill: var(--acccent-text-color);
-  }
-  @media screen and (min-width:1200px){
-  padding: 15px 32px;
   }
 }
