@@ -28,6 +28,10 @@ img {
   height: auto;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .container {
   margin: 0 auto;
   padding-left: 15px;
@@ -648,6 +652,9 @@ img {
   margin-bottom: auto;
 }
 
+.mobile__info {
+  position: relative;
+}
 .mobile__info:not(:first-child) {
   padding-top: 32px;
 }
@@ -661,6 +668,9 @@ img {
   text-decoration: none;
 }
 .mobile__pages:hover, .mobile__pages:focus {
+  color: var(--acccent-text-color);
+}
+.mobile__pages.current {
   color: var(--acccent-text-color);
 }
 
