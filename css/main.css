@@ -304,6 +304,8 @@ img {
 }
 
 .modal__castom-checkbox {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   margin-right: 7px;
   width: 16px;
   height: 15px;
@@ -456,7 +458,7 @@ img {
 }
 
 .nav__pages {
-  color: var(--title-text-color);
+  color: var(--primery-text-color);
   display: block;
   font-weight: 500;
   line-height: 1.14;
@@ -468,18 +470,7 @@ img {
 .nav__pages:hover, .nav__pages:focus {
   color: var(--acccent-text-color);
 }
-
-.nav__pages--current {
-  display: block;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  text-decoration: none;
-  color: var(--acccent-text-color);
-}
-.nav__pages--current::after {
+.nav__pages::after {
   content: "";
   position: absolute;
   background-color: var(--acccent-text-color);
@@ -488,6 +479,15 @@ img {
   left: 0;
   bottom: 0;
   border-radius: 2px;
+  display: none;
+}
+
+.nav__pages--current {
+  color: var(--acccent-text-color);
+}
+.nav__pages--current::after {
+  display: block;
+  margin-bottom: -1px;
 }
 
 .contacts {
@@ -999,8 +999,8 @@ img {
 
 .clients__title {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.17;
   text-align: center;
   margin-top: 0;
   margin-bottom: 30px;
@@ -1035,31 +1035,36 @@ img {
   width: calc(50% - 30px);
   margin-bottom: 30px;
   margin-left: 30px;
-  padding: 16px 52px;
-  border: 1px solid var(--logo-of-clients);
-  border-radius: 4px;
-}
-.clients__item:hover, .clients__item:focus {
-  border-color: var(--acccent-text-color);
 }
 @media screen and (min-width: 768px) {
   .clients__item {
     width: calc(33.3333333333% - 30px);
-    padding: 16px 60px;
   }
 }
 @media screen and (min-width: 1200px) {
   .clients__item {
     width: calc(16.6666666667% - 30px);
-    padding: 16px 32px;
   }
 }
 
 .clients__link {
   fill: var(--logo-of-clients);
+  border: 1px solid var(--logo-of-clients);
+  border-radius: 4px;
 }
 .clients__link:hover, .clients__link:focus {
   fill: var(--acccent-text-color);
+  border-color: var(--acccent-text-color);
+}
+@media screen and (min-width: 768px) {
+  .clients__link {
+    padding: 16px 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__link {
+    padding: 16px 32px;
+  }
 }
 
 .portfolio {
