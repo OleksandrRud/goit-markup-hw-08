@@ -1051,6 +1051,7 @@ img {
   fill: var(--logo-of-clients);
   border: 1px solid var(--logo-of-clients);
   border-radius: 4px;
+  padding: 16px calc(50% - 54px);
 }
 .clients__link:hover, .clients__link:focus {
   fill: var(--acccent-text-color);
