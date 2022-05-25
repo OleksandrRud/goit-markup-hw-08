@@ -821,6 +821,7 @@ img {
   color: var(--primery-text-color);
   text-align: center;
   font-weight: 700;
+  font-size: 14px;
   line-height: 1.14;
   margin: 0;
 }
